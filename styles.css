@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: clamp(0.75rem, .80rem + 1vw, 1rem);
+    background-color: var(--dark-cyan);
+    color: var(--grayish-blue);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    /* background-position: right 48vw bottom 40vh, left 45vw top 44vh; */
+    background-position: right 54vw bottom 40vh, left 50vw top 44vh;
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card {
+    background-color: #fff;
+    width: min(375px, 83%);
+    border-radius: 12px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-background {
+    height: 21vh;
+    max-height: 25vh;
+    background-image: url(./images/bg-pattern-card.svg);   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-photo {
+    width: 115px;
+    height: 115px;
+    background-image: url(./images/image-victor.jpg);
+    background-repeat: no-repeat;
+    border: 5px solid #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+    position: absolute;
+    top: 21%;
+    align-self: center;
+    /* left: 30%; */
+}
+
+.card-user {
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+.card-user-name, .list-item-number {
+    font-size: clamp(0.90rem, 1.125rem + 1vw, 1.2rem);
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    
+}
+
+.card-user-name {
+    margin-right: .25rem;
+    display: inline-block;
+}
+
+.card-user-age {
+    font-size: clamp(0.90rem, 1.125rem + 1vw, 1.2rem);
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.card-user-place {
+    margin-top: .4rem;
+    display: block;
+}
+
+.card-data {
+    border-top: 1px solid var(--dark-gray);
+    padding: 1.75rem 1rem;
+    padding-bottom: 1.25rem;
+}
+
+.card-data-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.data-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+}
+
+.list-item-name {
+    letter-spacing: 1px;
+    font-size: clamp(0.25rem, .40rem + 1vw, .75rem);
+}
+
+footer{
+    position: absolute;
+    bottom: 25px;
+    left: 36%;
+    font-size: clamp(.50rem, .56rem + 1vw, .93rem);
+    color: transparent;
+    transition: 350ms;
+  }
+  
+  footer a {
+    color: inherit;
+    transition: 10  0ms;
+  }
+  
+  footer:hover {
+    color: hsl(0, 0%, 0%);
+  }
+  
+  footer a:hover {
+    color: hsl(179, 62%, 83%);
+  } 
